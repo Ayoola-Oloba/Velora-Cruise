@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="florida.css">
+    <title>Florida</title>
+</head>
+<body>
+    <header>
+
+        <div class="top">
+
+            <div class="Velora">
+                
+                <div class="container">
+                    <a href="index.html"><h1>Velora <span>Cruise</span></h1></a>
+                    <nav class="first-nav">
+                        <a href=""><i class='bxr  bx-address-book'  ></i> Book</a><hr>
+                        <a href=""><i class='bxr  bx-phone-book'  ></i> Contact</a>
+                        <div id="menu-icon"><i class="bx bx-menu"></i></div>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div class="cruise">
+
+                <div class="container">
+
+                    <nav class="bottom navigation">
+                        <a href="">Florida</a>
+                        <a href="">California</a>
+                        <a href="">Texas</a>
+                        <a href="#">New York</a>
+                        <a href="#">Georgia</a>
+                    </nav>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="florida"><div class="overlay"></div>
+
+            <div class="container">
+
+                <h2>FLORIDA</h2>
+
+            </div>
+
+        </section>
+
+        <section>
+
+                <div class="under-florida container">
+
+                       <h3 id="Orlando">Orlando</h3>
+                       <h3 id="Miami">Miami</h3>
+                       <h3 id="Tampa">Tampa</h3>
+                       <h3 id="Fort">Fort Lauderdale</h3>
+                       <h3 id="Clearwater">Clearwater</h3>
+
+                </div>
+
+        </section>
+
+        <section>
+
+            <div class="Orlando container">
+                
+                <h4>Orlando</h4><hr>
+                <div class="options">
+                    <a href="">
+                        <div class="zoom"><img src="images/jump out.jpeg" alt=""></div>
+                        <div class="words">
+                            <p class="VIP">VIP Yatch Experience</p>
+                            <p>Tropical charm and unforgettable <br> at the southernmost point.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="zoom"><img src="images/Port Canaveral" alt=""></div>
+                        <div class="words">
+                            <p class="VIP">Swimming Experience</p>
+                            <p> Coastal cruises with perfect weather <br>and Pacific views.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="zoom"><img src="images/jetski.jpeg" alt=""></div>
+                        <div class="words">
+                            <p class="VIP">Port Canaveral Jetski Ride</p>
+                            <p>Sail past the Golden Gate into the <br>heart of adventure.</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer></footer>
+
+    <script>
+        let navbar=document.querySelector('.navigation')
+        let menuIcon=document.querySelector("#menu-icon")
+
+        menuIcon.onclick = () =>{
+            navbar.classList.toggle('active')
+            // menuIcon.classList.toggle("bx-x")
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
