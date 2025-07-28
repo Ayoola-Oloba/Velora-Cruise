@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e0f7fa;
+  color: #222;
+}
+
+header {
+  background: #004d4d;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+nav {
+  background: #00bcd4;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.four {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.tier-section {
+  padding: 35px 20px;
+  border: 1px solid #00acc1;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to bottom, #006064, #00acc1);
+  transition: 0.15s linear;
+  border-radius: 10px;
+}
+
+.tier-section:hover {
+  transform: scale(1.01);
+}
+
+.tier-section h2 {
+  color: #fff59d;
+}
+
+.tier-section p {
+  color: #e0f7fa;
+}
+
+.tier-section ul {
+  list-style: square;
+  padding-left: 20px;
+  color: #f1f8e9;
+}
+
+button {
+  padding: 5px 15px;
+  font-weight: 900;
+  margin-top: 5px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0px 5px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease-in-out;
+}
+
+button:hover {
+  color: #004d4d;
+  background-color: #fff9c4;
+  transform: scale(0.95);
+}
+
+footer {
+  background: #004d4d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 674px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .four {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
