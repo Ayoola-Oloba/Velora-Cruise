@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Velora Cruise</title>
 </head>
@@ -16,10 +17,10 @@
                 <div class="container">
                     <h1>Velora <span>Cruise</span></h1>
                     <nav class="first-nav">
-                        <a href=""><i class='bxr  bx-address-book'  ></i> Book</a><hr>
-                        <a href=""><i class='bxr  bx-phone-book'  ></i> Contact</a>
-                        <div id="menu-icon"><i class="bx bx-menu"></i></div>
+                        <a href=""><button class="button"><i class='bxr  bx-address-book'  ></i> Book</button></a><hr>
+                        <a href=""><button><i class='bxr  bx-phone-book'  ></i> Contact</button></a>
                     </nav>
+                    <div id="menu-icon"><i class="bx bx-menu"></i></div>
                 </div>
 
             </div>
@@ -29,41 +30,52 @@
                 <div class="container">
 
                     <nav class="bottom navigation">
-                        <select name="dest" class="Destination" style="border: 0 transparent; max-width: 100px;">
-                            <option value="" >Destination</option>
-                            <option value="" class="option"><a href="florida.html">Florida</a></option>
-                            <option value="" class="option"><a href="">California</a></option>
-                            <option value="" class="option"><a href="">Texas</a></option>
-                            <option value="" class="option"><a href="">New York</a></option>
-                            <option value="" class="option"><a href="">Georgia</a></option>
+                        <select name="dest" class="Destination" style="border: 0 transparent; max-width: 100px;" onchange="if(this.value) window.location.href=this.value;">
+                            <option value="">Destination</option>
+                            <option value="florida.html">Florida</option>
+                            <option value="california.html">California</option>
+                            <option value="texas.html">Texas</option>
+                            <option value="newyork.html">New York</option>
+                            <option value="georgia.html">Georgia</option>
+                        </select>
+
+                        <select name="explore" class="Destination" style="border: 0 transparent; max-width: 100px;" onchange="if(this.value) window.location.href=this.value;">
+                            <option value="">Explorations</option>
+                            <option value="florida.html#Orlando1">Orlando</option>
+                            <option value="florida.html#Miami1">Miami</option>
+                            <option value="florida.html#Tampa1">Tampa Bay</option>
+                            <option value="florida.html#Fort1">Fort Lauderdale</option>
+                            <option value="florida.html#Clearwater1">Clearwater</option>
+                            <option value="california.html#Angeles">Los Angeles</option>
+                            <option value="california.html#SanDiego">San Diego</option>
+                            <option value="california.html#SanFrancisco">San Francisco Bay</option>
+                            <option value="california.html#Long">Long Beach</option>
+                            <option value="california.html#newport">Newport Beach</option>
+                            <option value="texas.html#Galveston">Galveston</option>
+                            <option value="texas.html#Houston">Houston</option>
+                            <option value="texas.html#southpadre">South Padre Island</option>
+                            <option value="texas.html#corpuschristi">Corpus Christi</option>
+                            <option value="texas.html#portaransas">Port Aransas</option>
+                            <option value="new york.html#Newyorkcity">New York City</option>
+                            <option value="new york.html#Buffalo">Buffalo</option>
+                            <option value="new york.html#Rochester">Rochester</option>
+                            <option value="new york.html#longisland">Long Island</option>
+                            <option value="new york.html#Albany">Albany</option>
+                            <option value="georgia.html#Savannahriver">Savannah River</option>
+                            <option value="georgia.html#Atlanta">Atlanta</option>
+                            <option value="georgia.html#Augusta">Augusta</option>
+                            <option value="georgia.html#Athens">Athens</option>
+                            <option value="georgia.html#stsimonsisland">St. Simons Island</option>
                         </select>
                         
-                        <select name="dest" class="Destination" style="border: 0 transparent; max-width: 100px;">
-                            <option value="" class="exp">Explorations</option>
-                            <option value="" class="option"><a href="">Orlando</a></option>
-                            <option value="" class="option"><a href="">Miami</a></option>
-                            <option value="" class="option"><a href="">Tampa Bay</a></option>
-                            <option value="" class="option"><a href="">Fort Lauderdale</a></option>
-                            <option value="" class="option"><a href="">Clearwater</a></option>
-                            <option value="" class="option"><a href="">Catalina Island</a></option>
-                            <option value="" class="option"><a href="">San Diego</a></option>
-                            <option value="" class="option"><a href="">San Francisco Bay</a></option>
-                            <option value="" class="option"><a href="">Santa Barbara</a></option>
-                            <option value="" class="option"><a href="">Galveston</a></option>
-                            <option value="" class="option"><a href="">South Padre Island</a></option>
-                            <option value="" class="option"><a href="">Corpus Christi</a></option>
-                            <option value="" class="option"><a href="">New York Harbor</a></option>
-                            <option value="" class="option"><a href="">Hudson River</a></option>
-                            <option value="" class="option"><a href="">Long Island Sound</a></option>
-                            <option value="" class="option"><a href="">Savannah River</a></option>
-                            <option value="" class="option"><a href="">Tybee Island</a></option>
-                            <option value="" class="option"><a href="">St. Simons Island</a></option>
-                        </select>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="about.html">About Us</a>
+                        
+                        <!-- Book and Contact buttons -->
+                        <a href="#" class="button nav-button">Book</a>
+                        <a href="#" class="button nav-button">Contact</a>
 
-                        <a href="#">Gallery</a>
-
-                        <a href="#">About Us</a>
-                    </nav>
+                        </nav>
 
                 </div>
 
@@ -74,38 +86,19 @@
 
     <main>
 
-        <section class="slide"><div class="overlay"></div>
-            <div class="slideshow-container">
-                <!-- <div class="mySlides fade">
-                    <img src="images/74.jpg" style="width:100%">
-                </div> -->
-                
-                <div class="mySlides fade">
-                    <img src="images/cruise ship.jpg" style="width:100%">
-                </div>
-                
-                <div class="mySlides fade">
-                    <img src="images/new york.jpg" style="width:100%">
-                </div>
-                
-                <div class="mySlides fade">
-                    <img src="images/tropical-paradise.jpg" style="width:100%">
-                </div>
-
-                <!-- <div class="mySlides fade">
-                    <img src="images/boat.jpg" style="width: 100%">
-                </div> -->
-                
-            </div>
-            <div class="float">
-                <div class="container">
-                    <h2 class="flow-in">Go on the best cruise experience of your life.</h2>
-                </div>
+        <section class="hero">
+            <div class="slideshow">
+                <div class="slide" style="background-image: url('images/cruise\ ship.jpg');"></div>
+                <div class="slide" style="background-image: url('images/new\ york.jpg');"></div>
+                <div class="slide" style="background-image: url('images/tropical-paradise.jpg');"></div>
             </div>
 
+            <div class="hero-content">
+                <h1 class="flow-in">Experience Luxury<br>With Velora Cruise</h1>
+            </div>
         </section>
 
-        <section class="locate">
+        <section class="locate" id="locate">
 
             <div class="container">
 
@@ -150,7 +143,7 @@
 
         </section>
 
-        <section class="top-destination">
+        <section class="top-destination" id="top-destination">
 
             <div class="container">
 
@@ -165,7 +158,7 @@
                             <img src="images/Discover The Retro Charm Of Universal Orlando’s Cabana Bay Beach Resort.jpeg" alt="">
                             <p>Orlando</p>
                          </a>
-                         <a href="california.html#San Diego" class="flow-in">
+                         <a href="california.html#SanDiego" class="flow-in">
                             <img src="images/San Diego Cruise Terminal.jpeg" alt="">
                             <p>San Diego</p>
                          </a>
@@ -173,23 +166,23 @@
                             <img src="images/Miami.jpeg" alt="">
                             <p>Miami</p>
                          </a>
-                         <a href="new york.html#Orlando" class="flow-in">
+                         <a href="new york.html#Newyorkcity" class="flow-in">
                             <img src="images/New York Harbour.jpeg" alt="">
                             <p>New York Harbor</p>
                          </a>
-                         <a href="georgia.html#Orlando" class="flow-in">
+                         <a href="georgia.html#Savannahriver" class="flow-in">
                             <img src="images/Savannah river" alt="">
                             <p>Savannah River</p>
                          </a>
-                         <a href="georgia.html#St. Simons Island" class="flow-in">
+                         <a href="georgia.html#stsimonsisland" class="flow-in">
                             <img src="images/St_ Simons Island.jpeg" alt="">
                             <p>St. Simons Island</p>
                          </a>
-                         <a href="Texas.html#Orlando" class="flow-in">
+                         <a href="texas.html#Galveston" class="flow-in">
                             <img src="images/Galveston" alt="">
                             <p>Galveston</p>
                          </a>
-                         <a href="california.html#San Franscico" class="flow-in">
+                         <a href="california.html#SanFrancisco" class="flow-in">
                             <img src="images/SAN FRANCISO.jpeg" alt="">
                             <p>San Francisco Bay</p>
                          </a>
@@ -201,6 +194,32 @@
 
         </section>
 
+        <section class="trust-bar">
+            <div class="container trust-container">
+              <div class="trust-item">
+                <i class='bxr  bx-alert-shield'  style='color:#NaNNaNNaN'></i> 
+                <h3>Certified & Safe</h3>
+                <p>Fully certified cruise experience with highest safety standards.</p>
+              </div>
+              <div class="trust-item">
+                <i class='bx bx-smile'></i>
+                <h3>5,000+ Happy Customers</h3>
+                <p>Thousands of satisfied travelers and glowing reviews.</p>
+              </div>
+              <div class="trust-item">
+                <i class='bx bx-credit-card'></i>
+                <h3>Secure Payments</h3>
+                <p>Safe, encrypted payment gateways for your peace of mind.</p>
+              </div>
+              <div class="trust-item">
+                <i class='bx bx-headphone'></i>
+                <h3>24/7 Support</h3>
+                <p>Customer service ready anytime, anywhere.</p>
+              </div>
+            </div>
+          </section>
+          
+
         <section>
 
             <div class="experience container">
@@ -209,7 +228,7 @@
 
                 <div class="carousel">
 
-                         <a href="">
+                         <a href="florida.html#Orlando">
                             <div class="zoom"><img src="images/jump out.jpeg" alt=""></div>
                             <div class="words">
                                 <p class="VIP">VIP Yatch Experience</p>
@@ -289,30 +308,37 @@
             </div>
             <div class="foot1">
                 <h4>Destinations</h4>
-                <a href="">Orlando</a>
-                <a href="">Miami</a>
-                <a href="">Tampa Bay</a>
-                <a href="">Fort Lauderdale</a>
-                <a href="">Clearwater</a>
-                <a href="">Catalina Island</a>
-                <a href="">San Diego</a>
-                <a href="">San Francisco Bay</a>
-                <a href="">Santa Barbara</a>
-                <a href="">Galveston</a>
-                <a href="">South Padre Island</a>
-                <a href="">Corpus Christi</a>
-                <a href="">New York Harbor</a>
-                <a href="">Hudson River</a>
-                <a href="">Long Island Sound</a>
-                <a href="">Savannah River</a>
-                <a href="">Tybee Island</a>
-                <a href="">St. Simons Island</a>
+                <a href="florida.html#Orlando1">Orlando</a>
+                <a href="florida.html#Miami1">Miami</a>
+                <a href="florida.html#Tampa1">Tampa Bay</a>
+                <a href="florida.html#Fort1">Fort Lauderdale</a>
+                <a href="florida.html#Clearwater1">Clearwater</a>
+                <a href="california.html#Angeles">Los Angeles</a>
+                <a href="california.html#SanDiego">San Diego</a>
+                <a href="california.html#SanFrancisco">San Francisco Bay</a>
+                <a href="california.html#Long">Long Beach</a>
+                <a href="california.html#newport">Newport Beach</a>
+                <a href="texas.html#Galveston">Galveston</a>
+                <a href="texas.html#Houston">Houston</a>
+                <a href="texas.html#southpadre">South Padre Island</a>
+                <a href="texas.html#corpuschristi">Corpus Christi</a>
+                <a href="texas.html#portaransas">Port Aransas</a>
+                <a href="new york.html#Newyorkcity">New York City</a>
+                <a href="new york.html#Buffalo">Buffalo</a>
+                <a href="new york.html#Rochester">Rochester</a>
+                <a href="new york.html#longisland">Long Island</a>
+                <a href="new york.html#Albany">Albany</a>
+                <a href="georgia.html#Savannahriver">Savannah River</a>
+                <a href="georgia.html#Atlanta">Atlanta</a>
+                <a href="georgia.html#Augusta">Augusta</a>
+                <a href="georgia.html#Athens">Athens</a>
+                <a href="georgia.html#stsimonsisland">St. Simons Island</a>
             </div>
             <div class="foot1 feet">
-                <h4>Experiences</h4>
-                <a href="">VIP Yatch Experience</a>
-                <a href="">Port canaveral Sunset dinnner</a>
-                <a href="">Dolphin Experience</a>
+                <h4>Cruise</h4>
+                <a href="#">Home</a>
+                <a href="index.html#locate">Destinations</a>
+                <a href="index.html#top-destination">Explorations</a>
             </div>
 
         </div>
@@ -327,7 +353,63 @@
            // menuIcon.classList.toggle("bx-x")
        }
    </script>
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const selects = document.querySelectorAll('select.Destination');
+
+    selects.forEach(select => {
+      select.addEventListener('change', function () {
+        const selectedValue = this.value;
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+    // Get modal elements
+const authModal = document.getElementById('authModal');
+const closeModalBtn = document.getElementById('closeModal');
+
+// Open modal when any price button is clicked
+document.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // prevent actual booking for now
+    authModal.style.display = 'block';
+  });
+});
+
+// Close modal when X clicked
+closeModalBtn.addEventListener('click', () => {
+  authModal.style.display = 'none';
+});
+
+// Close modal when clicking outside modal content
+window.addEventListener('click', (e) => {
+  if (e.target == authModal) {
+    authModal.style.display = 'none';
+  }
+});
+
+// Handle form submit
+document.getElementById('authForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+
+  // TODO: Add real signup/login logic here (send to backend, validate, etc)
+  alert(`Email: ${email}\nPassword: ${password}\n\n(Here you’d connect to your backend!)`);
+  authModal.style.display = 'none';
+});
+
+  </script>
+
 
     <script src="script.js"></script>
 </body>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </html>

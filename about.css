@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+  }
+  
+  .about-header {
+    background: linear-gradient(to right, #004080, #0066cc);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-header h1 span {
+    background: #c9e7f9;
+    color: #004080;
+    padding: 4px 12px;
+    border-radius: 8px;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .about-content {
+    padding: 3rem 0;
+    background: white;
+  }
+  
+  .about-content .container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .about-text {
+    flex: 1 1 500px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: #004080;
+  }
+  
+  .about-text p {
+    margin-bottom: 1.2rem;
+    color: #444;
+  }
+  
+  .about-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #004d99;
+  }
+  
+  .about-image {
+    flex: 1 1 400px;
+    text-align: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Footer */
+  .about-footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-content .container {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .about-header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .about-text h2 {
+      font-size: 1.4rem;
+    }
+  }
+  

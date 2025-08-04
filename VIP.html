@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="VIP.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <title>VIP Yacht Experiences</title>
 </head>
 <body>
@@ -67,11 +68,106 @@
 
     </section>
 
+    <!-- Signup/Login Modal -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="closeModal">&times;</span>
+    <h2>Create Account or Login</h2>
+
+    <form id="authForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <button type="submit" id="submitBtn">Sign Up / Log In</button>
+    </form>
+
+    <p>Or sign in with:</p>
+    <div id="googleSignInDiv"></div>
+    <button id="appleSignIn">Apple</button>
+  </div>
+</div>
+
+
 </main>
 
   <footer>
     &copy; 2025 VIP Yacht Experience. All rights reserved.
   </footer>
+
+
+  <script>
+    // Get modal elements
+const authModal = document.getElementById('authModal');
+const closeModalBtn = document.getElementById('closeModal');
+
+// Open modal when any price button is clicked
+document.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // prevent actual booking for now
+    authModal.style.display = 'block';
+  });
+});
+
+// Close modal when X clicked
+closeModalBtn.addEventListener('click', () => {
+  authModal.style.display = 'none';
+});
+
+// Close modal when clicking outside modal content
+window.addEventListener('click', (e) => {
+  if (e.target == authModal) {
+    authModal.style.display = 'none';
+  }
+});
+
+// Handle form submit
+document.getElementById('authForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+
+  // TODO: Add real signup/login logic here (send to backend, validate, etc)
+  alert(`Email: ${email}\nPassword: ${password}\n\n(Here you’d connect to your backend!)`);
+  authModal.style.display = 'none';
+});
+
+  </script>
+
+  <script>
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: '657681729906-rj7h0r06h6nmgnakspn5fb53k5pcelv2.apps.googleusercontent.com',
+        callback: handleGoogleCredentialResponse
+      });
+  
+      google.accounts.id.renderButton(
+        document.getElementById('googleSignInDiv'),
+        { theme: "outline", size: "large" }
+      );
+    };
+  
+    function handleGoogleCredentialResponse(response) {
+      // The ID token sent by Google
+      const idToken = response.credential;
+      console.log("Google ID Token:", idToken);
+  
+      // TODO: Send the token to your backend to verify & authenticate
+      alert("Google sign-in successful. Token sent to backend for verification.");
+  
+      document.getElementById('authModal').style.display = 'none';
+    }
+  </script>
+
+  <script>
+    document.getElementById('appleSignIn').addEventListener('click', () => {
+      alert("Apple Sign-In requires Apple Developer setup.\nLet me know when you're ready to enable it.");
+    });
+  </script>
+  
+  
 
 </body>
 </html>

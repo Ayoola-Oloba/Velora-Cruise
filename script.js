@@ -1,17 +1,15 @@
-let slideIndex = 0;
-showSlides();
+const slides = document.querySelectorAll(".slide");
+let index = 0;
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 3 seconds
+function showSlide() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+  index = (index + 1) % slides.length;
 }
+
+showSlide();
+setInterval(showSlide, 5000); // 5 seconds per slide
+
 
 //flow
 
