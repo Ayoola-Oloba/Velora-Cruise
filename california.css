@@ -160,19 +160,34 @@ h3{
 }
 
 #Orlando1{
-    background: url("images/Orlando\ Florida.jpeg");
+    background: url("images/norwegian-bliss-11-4-21_11042021.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #Miami{
-    background: url("images/Miami.jpg");
+    background: url("images/sanfrans.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #Tampa{
-    background: url("images/tampa-riverwalk2-resize.jpg");
+    background: url("images/CH-LB-1024x683.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #Fort{
-    background: url("images/fort.webp");
+    background: url("images/Flagship-san-diego-bay-harbour-tour.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #Clearwater{
-    background: url("images/clearwater.jpeg");
+    background: url("images/26.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .options{
@@ -251,6 +266,7 @@ h4{
     padding: 1rem 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #004d99;
+    background: linear-gradient(to right,#004d99,#012346);
 }
 
 .Orlando hr{
@@ -582,6 +598,7 @@ h5{
   }
   .under-florida{
     flex-direction: column;
+    height: 50vh;
     margin-bottom: 1rem;
   }
     .under-florida h3 {
@@ -607,7 +624,6 @@ h5{
   }
   
   .under-florida h3 {
-    height: 8vh;
     font-size: 1rem;
   }
     footer{
@@ -697,7 +713,6 @@ h5{
     height: 25vh;
   }
   .under-florida h3 {
-    height: 6vh;
     font-size: 0.9rem;
   }
 }
